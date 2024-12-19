@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product</title>
+    <link rel="stylesheet" href="./create.css">
+    <link rel="stylesheet" href="./product.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Aria</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">bosh sahifa</a></li>
+                <li><a href="./product.html"> Mahsulotlar</a></li>
+                <li><a href="create.html" class="active">Mahsulot qo'shish</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Create a New Product</h1>
+        <form id="create-form">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" required>
+
+            <label for="product-description">Description:</label>
+            <textarea id="product-description" required></textarea>
+
+            <label for="product-price">Price:</label>
+            <input type="text" id="product-price" required>
+
+            <label for="product-image">Image URL:</label>
+            <input type="url" id="product-image" required>
+
+            <button type="submit">Add Product</button>
+        </form>
+    </main>
+</body>
+<script src="./create.js"></script>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <h1>Aria</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">bosh sahifa</a></li>
+            <li><a href="./product.html"> Mahsulotlar</a></li>
+            <li><a href="create.html">Mahsulot qo'shish</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="top-actions">
+            <button onclick="window.location.href='./create.html'">Create Product</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="product-table">
+                <!-- Rows will be populated dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal" id="edit-modal">
+        <div class="modal-header">
+            <h3>Edit Product</h3>
+            <button onclick="closeModal()">&times;</button>
+        </div>
+        <form id="edit-form">
+            <div>
+                <label for="edit-name">Product Name</label>
+                <input type="text" id="edit-name" name="name">
+            </div>
+            <div>
+                <label for="edit-description">Description</label>
+                <textarea id="edit-description" name="description"></textarea>
+            </div>
+            <div>
+                <label for="edit-price">Price</label>
+                <input type="text" id="edit-price" name="price">
+            </div>
+            <div>
+                <label for="edit-image">Image URL</label>
+                <input type="text" id="edit-image" name="image">
+            </div>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+    <div class="overlay" id="overlay" onclick="closeModal()"></div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
