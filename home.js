@@ -27,9 +27,41 @@ function renderProducts() {
 }
 
 function viewProduct(id) {
-    alert(`You clicked on product ID: ${id}`);
-    // Additional logic for viewing a product can be added here
+    const products = getProducts();
+    const product = products.find(p => p.id === id);
+
+    if (product) {
+        const modalDetails = document.getElementById("modal-details");
+        modalDetails.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <p class="price">${product.price}</p>
+        `;
+        openModal();
+    }
 }
+
+function openModal() {
+    const modal = document.getElementById("modal");
+    modal.style.display = "flex";
+}
+
+function closeModal() {
+    const modal = document.getElementById("modal");
+    modal.style.display = "none";
+}
+
+// Event listener for closing the modal
+document.getElementById("close-modal").addEventListener("click", closeModal);
+
+// Close modal if clicked outside the modal content
+window.addEventListener("click", function (event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+        closeModal();
+    }
+});
 
 // Initialize the page
 renderProducts();
