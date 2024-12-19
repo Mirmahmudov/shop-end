@@ -76,9 +76,9 @@ function deleteProduct(id) {
 // Initialize products if not in localStorage
 if (!localStorage.getItem("products")) {
     const initialProducts = [
-        { id: 1, name: "Product 1", description: "Description 1", price: "$100", image: "https://via.placeholder.com/100" },
-        { id: 2, name: "Product 2", description: "Description 2", price: "$200", image: "https://via.placeholder.com/100" },
-        { id: 3, name: "Product 3", description: "Description 3", price: "$300", image: "https://via.placeholder.com/100" },
+        { id: 1, name: "Product 1", description: "Description 1", price: "$100", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVEADC3qJLcSX4JTE-dLj9R5_fHSGpvnOtZA&s" },
+        { id: 2, name: "Product 2", description: "Description 2", price: "$200", image: "https://rare-gallery.com/thumbnail/442979-2020-Chevrolet-Corvette-Stingray-Z51-Chevrolet-Corvette-Stingray.jpg" },
+        { id: 3, name: "Product 3", description: "Description 3", price: "$300", image: "https://i.ytimg.com/vi/0id5rVsErUw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCfJYmIyDYzp2uxNktN7lm6GOOnRQ" },
     ];
     saveProducts(initialProducts);
 }

@@ -6,16 +6,15 @@ body {
     text-align: center;
 }
 
-header {
-    background-color: #333;
-    padding: 10px 20px;
-    color: #fff;
-}
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: #333;
+    color: #fff;
+
+
 }
 
 nav ul {
@@ -49,9 +48,13 @@ main {
     justify-content: center;
     flex-direction: column;
     background: linear-gradient(5deg, #555, #ccc3c3);
-    color: #fff;
+    background-image: url("https://bts.uz/img/slider/1689674792.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    color: white;
     border-radius: 10px;
-    height: 80vh;
+    height: 100vh;
     margin-bottom: 30px;
 }
 
